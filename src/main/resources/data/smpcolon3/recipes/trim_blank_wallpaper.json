@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "p"
+  ],
+  "key": {
+    "#": {
+      "item": "smpcolon3:blank_wallpaper"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": { "item": "smpcolon3:trim_blank_wallpaper" }
+}

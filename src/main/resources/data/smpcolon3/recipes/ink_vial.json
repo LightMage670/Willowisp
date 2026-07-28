@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {"item": "minecraft:ink_sac"},
+        {"item": "minecraft:ink_sac"},
+        {"item": "minecraft:ink_sac"},
+        {"item": "smpcolon3:vial"}
+    ],
+    "result": {
+        "item": "smpcolon3:ink_vial"
+    }
+}

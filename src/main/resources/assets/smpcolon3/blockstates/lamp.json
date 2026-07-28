@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "smpcolon3:block/lamp" },
+    "lit=true": { "model": "smpcolon3:block/lamp_on" }
+  }
+}

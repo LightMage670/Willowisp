@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "smpcolon3:block/lamp2_on"
+  }
+}

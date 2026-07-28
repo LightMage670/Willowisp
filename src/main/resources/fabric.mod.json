@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "smpcolon3",
+	"version": "${version}",
+	"name": "SMP :3",
+	"description": "A mod for the SMP :3 Community\n\nContributors:\nCode: LightMage670\nTextures:\n  Lilkokoma (Vials, Syringe, Divine, Contracts)\n  DuckierHawk4222 (Liminal Blocks)",
+	"authors": [
+		"LightMage670",
+		"Lilkokoma",
+		"DuckierHawk4222"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/smpcolon3/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"lightmage670.smpcolon3.Smpcolon3"
+		],
+		"client": [
+			"lightmage670.smpcolon3.client.Smpcolon3Client"
+		]
+	},
+	"mixins": [
+		"smpcolon3.mixins.json",
+		{
+			"config": "smpcolon3.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

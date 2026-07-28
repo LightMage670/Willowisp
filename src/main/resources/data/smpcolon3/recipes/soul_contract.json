@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ddd",
+    "d#d",
+    "ddd"
+  ],
+  "key": {
+    "#": {
+      "item": "smpcolon3:contract"
+    },
+    "d": {
+      "item": "smpcolon3:divine_dust"
+    }
+  },
+  "result": { "item": "smpcolon3:soul_contract" }
+}

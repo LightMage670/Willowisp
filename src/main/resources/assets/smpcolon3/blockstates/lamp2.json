@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x,lit=false": { "model": "smpcolon3:block/lamp2", "x":90, "y":90 },
+    "axis=y,lit=false": { "model": "smpcolon3:block/lamp2" },
+    "axis=z,lit=false": { "model": "smpcolon3:block/lamp2", "x":90 },
+    "axis=x,lit=true": { "model": "smpcolon3:block/lamp2_on", "x":90, "y":90 },
+    "axis=y,lit=true": { "model": "smpcolon3:block/lamp2_on" },
+    "axis=z,lit=true": { "model": "smpcolon3:block/lamp2_on", "x":90 }
+  }
+}

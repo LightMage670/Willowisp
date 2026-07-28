@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:raw_gold_block"},
+    {"item": "smpcolon3:god_vial"}
+  ],
+  "result": { "item": "smpcolon3:divine_dust", "count":3 }
+}

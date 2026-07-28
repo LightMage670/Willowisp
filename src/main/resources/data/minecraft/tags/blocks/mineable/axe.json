@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "smpcolon3:blank_wallpaper",
+    "smpcolon3:trim_blank_wallpaper",
+    "smpcolon3:wallpaper",
+    "smpcolon3:trim_wallpaper",
+    "smpcolon3:torn_wallpaper"
+  ]
+}

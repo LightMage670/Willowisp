@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {"item": "smpcolon3:dried_divine_blood"},
+        {"item": "smpcolon3:dried_divine_blood"},
+        {"item": "minecraft:water_bucket"},
+        {"item": "smpcolon3:vial"}
+    ],
+    "result": {
+        "item": "smpcolon3:divine_vial"
+    }
+}

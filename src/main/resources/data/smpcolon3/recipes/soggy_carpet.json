@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#w#",
+        "###"
+    ],
+    "key": {
+        "#": {"item": "smpcolon3:carpet"},
+        "w": {"item": "minecraft:water_bucket"}
+    },
+    "result": {
+        "item": "smpcolon3:soggy_carpet",
+        "count": 8
+    }
+}
