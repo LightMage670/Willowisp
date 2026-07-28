@@ -1,9 +1,12 @@
-# smpcolon3
+# :3 (Colon3) Content
 
-## Setup
+## Contributors
+Code:
+- LightMage670
+Textures:
+- Lilkokoma (Vials, Syringe, Divine, Contracts)
+- DuckierHawk4222 (Liminal Blocks)
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Note
+This mod is updated solely for Colon3 SMP, and my intention with coding it is to keep it as minimal as possible.
+Features will be added as requested by and in collaboration with the Colon3 Admin Team.
