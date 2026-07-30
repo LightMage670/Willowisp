@@ -25,14 +25,14 @@ public class Syringe extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(user.isSneaking()){
             ItemStack vial = null;
-            if(getBlood(user).equals("none")){ vial = null; return TypedActionResult.pass(user.getStackInHand(hand)); }
+            if(getBlood(user).equals("none")){ vial = null; return TypedActionResult.fail(user.getStackInHand(hand)); }
             else if(getBlood(user).equals("mortal")){ vial = new ItemStack(Smpcolon3.MORTAL_VIAL); }
             else if(getBlood(user).equals("divine")){ vial = new ItemStack(Smpcolon3.DIVINE_VIAL); }
             else if(getBlood(user).equals("god")){ vial = new ItemStack(Smpcolon3.GOD_VIAL); }
             else if(getBlood(user).equals("vampire")){ vial = new ItemStack(Smpcolon3.VAMP_VIAL); }
             else if(getBlood(user).equals("sculk")){ vial = new ItemStack(Smpcolon3.SCULK_VIAL); }
             else if(getBlood(user).equals("ink")){ vial = new ItemStack(Smpcolon3.INK_VIAL); }
-            else { return TypedActionResult.pass(user.getStackInHand(hand)); }
+            else { return TypedActionResult.fail(user.getStackInHand(hand)); }
             Inventory userInv = user.getInventory();
             Set<Item> vialItems = Set.of(Smpcolon3.VIAL);
             if(userInv.containsAny(vialItems)){

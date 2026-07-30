@@ -19,7 +19,7 @@ public class bloodAttachments {
 
     public record BloodData(AttachmentTarget target, String value){
         public String getBloodType(PlayerEntity target) {
-            return this.target.getAttachedOrCreate(BLOOD_TYPE);
+            return this.target.getAttachedOrElse(BLOOD_TYPE, "none");
         }
     
         public void setBloodType(AttachmentTarget target, String value) {
