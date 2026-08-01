@@ -23,7 +23,7 @@ public class Syringe extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if(user.isSneaking()){
+        if(user.isSneaking() && !world.isClient()){
             ItemStack vial = null;
             if(getBlood(user).equals("none")){ vial = null; return TypedActionResult.fail(user.getStackInHand(hand)); }
             else if(getBlood(user).equals("mortal")){ vial = new ItemStack(Smpcolon3.MORTAL_VIAL); }
@@ -54,50 +54,52 @@ public class Syringe extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        ItemStack vial = null;
-        Inventory userInv = user.getInventory();
-        Set<Item> vialItems = Set.of(Smpcolon3.VIAL);
-        if(userInv.containsAny(vialItems)){
-            boolean invFull = invIsFull(user);
-            if(entity instanceof PlayerEntity){
-                if(getBlood((PlayerEntity) entity).equals("none")){ vial = null; return ActionResult.FAIL; }
-                else if(getBlood((PlayerEntity) entity).equals("mortal")){ vial = new ItemStack(Smpcolon3.MORTAL_VIAL); }
-                else if(getBlood((PlayerEntity) entity).equals("divine")){ vial = new ItemStack(Smpcolon3.DIVINE_VIAL); }
-                else if(getBlood((PlayerEntity) entity).equals("god")){ vial = new ItemStack(Smpcolon3.GOD_VIAL); }
-                else if(getBlood((PlayerEntity) entity).equals("vampire")){ vial = new ItemStack(Smpcolon3.VAMP_VIAL); }
-                else if(getBlood((PlayerEntity) entity).equals("sculk")){ vial = new ItemStack(Smpcolon3.SCULK_VIAL); }
-                else if(getBlood((PlayerEntity) entity).equals("ink")){ vial = new ItemStack(Smpcolon3.INK_VIAL); }
-                else { return ActionResult.FAIL; }
-                for(int i = 0; i<userInv.size();i++){
-                    ItemStack invSlot = userInv.getStack(i);
-                    if (!invSlot.isEmpty() && vialItems.contains(invSlot.getItem())) {
-                        invSlot.decrement(1);
-                        if(invFull){ user.dropStack(vial); }
-                        else{ user.giveItemStack(vial); }
-                        user.playerScreenHandler.sendContentUpdates();
-                        return ActionResult.SUCCESS;
+        if(!entity.getWorld().isClient()){
+            ItemStack vial = null;
+            Inventory userInv = user.getInventory();
+            Set<Item> vialItems = Set.of(Smpcolon3.VIAL);
+            if(userInv.containsAny(vialItems)){
+                boolean invFull = invIsFull(user);
+                if(entity instanceof PlayerEntity){
+                    if(getBlood((PlayerEntity) entity).equals("none")){ vial = null; return ActionResult.FAIL; }
+                    else if(getBlood((PlayerEntity) entity).equals("mortal")){ vial = new ItemStack(Smpcolon3.MORTAL_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("divine")){ vial = new ItemStack(Smpcolon3.DIVINE_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("god")){ vial = new ItemStack(Smpcolon3.GOD_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("vampire")){ vial = new ItemStack(Smpcolon3.VAMP_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("sculk")){ vial = new ItemStack(Smpcolon3.SCULK_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("ink")){ vial = new ItemStack(Smpcolon3.INK_VIAL); }
+                    else { return ActionResult.FAIL; }
+                    for(int i = 0; i<userInv.size();i++){
+                        ItemStack invSlot = userInv.getStack(i);
+                        if (!invSlot.isEmpty() && vialItems.contains(invSlot.getItem())) {
+                            invSlot.decrement(1);
+                            if(invFull){ user.dropStack(vial); }
+                            else{ user.giveItemStack(vial); }
+                            user.playerScreenHandler.sendContentUpdates();
+                            return ActionResult.SUCCESS;
+                        }
                     }
                 }
-            }
-            else if (entity instanceof PigEntity){
-                for(int i = 0; i<userInv.size();i++){
-                    ItemStack invSlot = userInv.getStack(i);
-                    if (!invSlot.isEmpty() && vialItems.contains(invSlot.getItem())) {
-                        invSlot.decrement(1);
-                        if(invFull){ user.dropStack(new ItemStack(Smpcolon3.MORTAL_VIAL)); }
-                        else{ user.giveItemStack(new ItemStack(Smpcolon3.MORTAL_VIAL)); }
-                        return ActionResult.SUCCESS;
+                else if (entity instanceof PigEntity){
+                    for(int i = 0; i<userInv.size();i++){
+                        ItemStack invSlot = userInv.getStack(i);
+                        if (!invSlot.isEmpty() && vialItems.contains(invSlot.getItem())) {
+                            invSlot.decrement(1);
+                            if(invFull){ user.dropStack(new ItemStack(Smpcolon3.MORTAL_VIAL)); }
+                            else{ user.giveItemStack(new ItemStack(Smpcolon3.MORTAL_VIAL)); }
+                            return ActionResult.SUCCESS;
+                        }
                     }
                 }
-            }
-            else if (entity instanceof WardenEntity){
-                for(int i = 0; i<userInv.size();i++){
-                    ItemStack invSlot = userInv.getStack(i);
-                    if (!invSlot.isEmpty() && vialItems.contains(invSlot.getItem())) {
-                        invSlot.decrement(1);
-                        if(invFull){ user.dropStack(new ItemStack(Smpcolon3.SCULK_VIAL)); }
-                        else{ user.giveItemStack(new ItemStack(Smpcolon3.SCULK_VIAL)); }
-                        return ActionResult.SUCCESS;
+                else if (entity instanceof WardenEntity){
+                    for(int i = 0; i<userInv.size();i++){
+                        ItemStack invSlot = userInv.getStack(i);
+                        if (!invSlot.isEmpty() && vialItems.contains(invSlot.getItem())) {
+                            invSlot.decrement(1);
+                            if(invFull){ user.dropStack(new ItemStack(Smpcolon3.SCULK_VIAL)); }
+                            else{ user.giveItemStack(new ItemStack(Smpcolon3.SCULK_VIAL)); }
+                            return ActionResult.SUCCESS;
+                        }
                     }
                 }
             }
