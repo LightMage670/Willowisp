@@ -7,6 +7,7 @@ Code:
 Textures:
 - Lilkokoma (Vials, Syringe, Divine, Contracts)
 - DuckierHawk4222 (Liminal Blocks)
+- Monti_01 (Amarite Amulet)
 
 ## Note
 This mod is updated solely for Colon3 SMP, and my intention with coding it is to keep it as minimal as possible.
