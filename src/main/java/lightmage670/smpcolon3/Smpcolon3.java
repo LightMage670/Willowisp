@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BarrierBlock;
 import net.minecraft.block.Block;
@@ -85,6 +86,8 @@ public class Smpcolon3 implements ModInitializer {
 	public static final Block DIVINE_BLOCK = new Block(AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(3.0F, 6.0F).sounds(BlockSoundGroup.NETHERITE));
 	public static final BlockItem DIVINE_BLOCK_ITEM = new BlockItem(DIVINE_BLOCK, new FabricItemSettings());
 	public static final Item AMARITE_AMULET = new Item(new FabricItemSettings());
+	public static final FoodComponent BONBON_FOOD_COMPONENT = new FoodComponent.Builder().hunger(1).alwaysEdible().snack().build();
+	public static final Item BONBON = new Item(new FabricItemSettings().food(BONBON_FOOD_COMPONENT));
 	
 
 	@Override
@@ -134,6 +137,7 @@ public class Smpcolon3 implements ModInitializer {
 		Registry.register(Registries.BLOCK, new Identifier("smpcolon3", "divine_block"), DIVINE_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "divine_block"), DIVINE_BLOCK_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "amarite_amulet"), AMARITE_AMULET);
+		Registry.register(Registries.ITEM, new Identifier("amulet", "strawberry_bonbon"), BONBON);
 
 		CommandRegistrationCallback.EVENT.register((dispatcher,registryAccess,environment)->{
 			dispatcher.register(
