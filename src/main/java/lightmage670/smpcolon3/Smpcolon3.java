@@ -84,6 +84,7 @@ public class Smpcolon3 implements ModInitializer {
 	public static final Item SOUL_CONTRACT = new Item(new FabricItemSettings());
 	public static final Block DIVINE_BLOCK = new Block(AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(3.0F, 6.0F).sounds(BlockSoundGroup.NETHERITE));
 	public static final BlockItem DIVINE_BLOCK_ITEM = new BlockItem(DIVINE_BLOCK, new FabricItemSettings());
+	public static final Item AMARITE_AMULET = new Item(new FabricItemSettings());
 	
 
 	@Override
@@ -132,6 +133,7 @@ public class Smpcolon3 implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "soul_contract"), SOUL_CONTRACT);
 		Registry.register(Registries.BLOCK, new Identifier("smpcolon3", "divine_block"), DIVINE_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "divine_block"), DIVINE_BLOCK_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "amarite_amulet"), AMARITE_AMULET);
 
 		CommandRegistrationCallback.EVENT.register((dispatcher,registryAccess,environment)->{
 			dispatcher.register(

@@ -39,6 +39,7 @@ public final class Smpcolon3ItemGroups {
             entries.add(Smpcolon3.LAMP_ITEM);
             entries.add(Smpcolon3.LAMP2_ITEM);
             entries.add(Smpcolon3.CLEAR_ITEM);
+            entries.add(Smpcolon3.AMARITE_AMULET);
         })
         .build();
 
