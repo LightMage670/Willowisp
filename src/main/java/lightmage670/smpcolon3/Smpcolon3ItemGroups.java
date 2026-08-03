@@ -35,12 +35,15 @@ public final class Smpcolon3ItemGroups {
             entries.add(Smpcolon3.TORN_WALLPAPER_ITEM);
             entries.add(Smpcolon3.BLANK_WALLPAPER_ITEM);
             entries.add(Smpcolon3.TRIM_BLANK_WALLPAPER_ITEM);
+            entries.add(Smpcolon3.WAVY_WALLPAPER_ITEM);
+            entries.add(Smpcolon3.CUBED_WALLPAPER_ITEM);
             entries.add(Smpcolon3.CEILING_TILE_ITEM);
             entries.add(Smpcolon3.LAMP_ITEM);
             entries.add(Smpcolon3.LAMP2_ITEM);
             entries.add(Smpcolon3.CLEAR_ITEM);
             entries.add(Smpcolon3.AMARITE_AMULET);
             entries.add(Smpcolon3.BONBON);
+            
         })
         .build();
 

@@ -88,6 +88,10 @@ public class Smpcolon3 implements ModInitializer {
 	public static final Item AMARITE_AMULET = new Item(new FabricItemSettings());
 	public static final FoodComponent BONBON_FOOD_COMPONENT = new FoodComponent.Builder().hunger(1).alwaysEdible().snack().build();
 	public static final Item BONBON = new Item(new FabricItemSettings().food(BONBON_FOOD_COMPONENT));
+	public static final Block WAVY_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem WAVY_WALLPAPER_ITEM = new BlockItem(WAVY_WALLPAPER, new FabricItemSettings());
+	public static final Block CUBED_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem CUBED_WALLPAPER_ITEM = new BlockItem(CUBED_WALLPAPER, new FabricItemSettings());
 	
 
 	@Override
@@ -137,7 +141,11 @@ public class Smpcolon3 implements ModInitializer {
 		Registry.register(Registries.BLOCK, new Identifier("smpcolon3", "divine_block"), DIVINE_BLOCK);
 		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "divine_block"), DIVINE_BLOCK_ITEM);
 		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "amarite_amulet"), AMARITE_AMULET);
-		Registry.register(Registries.ITEM, new Identifier("amulet", "strawberry_bonbon"), BONBON);
+		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "strawberry_bonbon"), BONBON);
+		Registry.register(Registries.BLOCK, new Identifier("smpcolon3", "wavy_wallpaper"), WAVY_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "wavy_wallpaper"), WAVY_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("smpcolon3", "cubed_wallpaper"), CUBED_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("smpcolon3", "cubed_wallpaper"), CUBED_WALLPAPER_ITEM);
 
 		CommandRegistrationCallback.EVENT.register((dispatcher,registryAccess,environment)->{
 			dispatcher.register(

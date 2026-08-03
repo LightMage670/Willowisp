@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "smpcolon3:block/cubed_wallpaper",
+      "x":90,
+      "y":90
+    },
+    "axis=y": {
+      "model": "smpcolon3:block/cubed_wallpaper"
+    },
+    "axis=z": {
+      "model": "smpcolon3:block/cubed_wallpaper",
+      "x":90
+    }
+  }
+}
