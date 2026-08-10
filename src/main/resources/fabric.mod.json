@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "smpcolon3",
+	"id": "willowisp",
 	"version": "${version}",
-	"name": "SMP :3",
-	"description": "A mod for the SMP :3 Community\n\nContributors:\nCode: LightMage670\nTextures:\n  Lilkokoma (Vials, Syringe, Divine, Contracts)\n  DuckierHawk4222 (Liminal Blocks)\n Monti_01 (Amarite Amulet)\n Allen_Starlight (Strawberry Bonbons)",
+	"name": "Willowisp Content Mod",
+	"description": "A mod for the Willowisp SMP Community\n\nContributors:\nCode: LightMage670\nTextures:\n  Lilkokoma (Vials, Syringe, Divine, Contracts)\n  DuckierHawk4222 (Liminal Blocks)\n Monti_01 (Amarite Amulet)\n Allen_Starlight (Strawberry Bonbons)",
 	"authors": [
 		"LightMage670",
 		"Lilkokoma",
@@ -14,20 +14,20 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/smpcolon3/icon.png",
+	"icon": "assets/willowisp/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"lightmage670.smpcolon3.Smpcolon3"
+			"lightmage670.willowisp.Willowisp"
 		],
 		"client": [
-			"lightmage670.smpcolon3.client.Smpcolon3Client"
+			"lightmage670.willowisp.client.WillowispClient"
 		]
 	},
 	"mixins": [
-		"smpcolon3.mixins.json",
+		"willowisp.mixins.json",
 		{
-			"config": "smpcolon3.client.mixins.json",
+			"config": "willowisp.client.mixins.json",
 			"environment": "client"
 		}
 	],

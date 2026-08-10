@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ddd",
+    "d#d",
+    "ddd"
+  ],
+  "key": {
+    "#": {
+      "item": "willowisp:contract"
+    },
+    "d": {
+      "item": "willowisp:divine_dust"
+    }
+  },
+  "result": { "item": "willowisp:soul_contract" }
+}

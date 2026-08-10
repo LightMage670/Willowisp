@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:raw_gold_block"},
+    {"item": "willowisp:god_vial"}
+  ],
+  "result": { "item": "willowisp:divine_dust", "count":3 }
+}

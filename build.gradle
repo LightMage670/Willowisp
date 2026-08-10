@@ -16,9 +16,9 @@ repositories {
 
 loom {
 	splitEnvironmentSourceSets()
-	accessWidenerPath = file("src/main/resources/colon3access.aw")
+	accessWidenerPath = file("src/main/resources/willowisp_access.aw")
 	mods {
-		"smpcolon3" {
+		"willowisp" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

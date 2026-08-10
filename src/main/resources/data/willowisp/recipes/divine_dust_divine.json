@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bbb",
+    "b#b",
+    "bbb"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:raw_gold_block"
+    },
+    "b": {
+      "item": "willowisp:divine_vial"
+    }
+  },
+  "result": { "item": "willowisp:divine_dust", "count":2 }
+}

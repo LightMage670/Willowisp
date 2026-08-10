@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "willowisp:divine_dust"
+    }
+  },
+  "result": { "item": "willowisp:divine_nugget"}
+}

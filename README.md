@@ -1,4 +1,4 @@
-# :3 (Colon3) Content
+# Willowisp SMP Content
 
 ## Contributors
 Code:
@@ -11,5 +11,5 @@ Textures:
 - Allen_Starlight (Strawberry Bonbons)
 
 ## Note
-This mod is updated solely for Colon3 SMP, and my intention with coding it is to keep it as minimal as possible.
-Features will be added as requested by and in collaboration with the Colon3 Admin Team.
+This mod is updated solely for Willowisp SMP, and my intention with coding it is to keep it as minimal as possible.
+Features will be added as requested by and in collaboration with the Willowisp Admin Team.

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#q#",
+        "###"
+    ],
+    "key": {
+        "#": {"item": "minecraft:glass"},
+        "q": {"item": "minecraft:quartz_block"}
+    },
+    "result": {
+        "item": "willowisp:clear"
+    }
+}

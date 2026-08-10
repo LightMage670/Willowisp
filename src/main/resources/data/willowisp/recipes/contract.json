@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {"item": "willowisp:ink_vial"},
+        {"item": "minecraft:leather"},
+        {"item": "minecraft:paper"},
+        {"item": "minecraft:paper"}
+    ],
+    "result": {
+        "item": "willowisp:contract"
+    }
+}

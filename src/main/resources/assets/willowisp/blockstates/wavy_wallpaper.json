@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "willowisp:block/wavy_wallpaper",
+      "x":90,
+      "y":90
+    },
+    "axis=y": {
+      "model": "willowisp:block/wavy_wallpaper"
+    },
+    "axis=z": {
+      "model": "willowisp:block/wavy_wallpaper",
+      "x":90
+    }
+  }
+}

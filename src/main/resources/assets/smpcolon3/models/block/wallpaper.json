@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "smpcolon3:block/wallpaper_side",
-    "end": "smpcolon3:block/wallpaper_end"
-  }
-}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "willowisp:divine_block"
+    }
+  ],
+  "result": { "item": "willowisp:divine_ingot", "count":9 }
+}

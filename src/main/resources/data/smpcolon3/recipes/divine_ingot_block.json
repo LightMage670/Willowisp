@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "smpcolon3:divine_block"
-    }
-  ],
-  "result": { "item": "smpcolon3:divine_ingot", "count":9 }
-}

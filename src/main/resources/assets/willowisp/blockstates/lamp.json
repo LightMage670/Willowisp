@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "willowisp:block/lamp" },
+    "lit=true": { "model": "willowisp:block/lamp_on" }
+  }
+}

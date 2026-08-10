@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {"item": "willowisp:dried_divine_blood"},
+        {"item": "willowisp:dried_divine_blood"},
+        {"item": "minecraft:water_bucket"},
+        {"item": "willowisp:vial"}
+    ],
+    "result": {
+        "item": "willowisp:divine_vial"
+    }
+}
