@@ -13,3 +13,8 @@ Textures:
 ## Note
 This mod is updated solely for Willowisp SMP, and my intention with coding it is to keep it as minimal as possible.
 Features will be added as requested by and in collaboration with the Willowisp Admin Team.
+
+## Roadmap
+- Blood Persistence
+- Soulbreak Enchant
+- Finish Up Liminal Blocks
