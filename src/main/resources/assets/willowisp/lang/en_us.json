@@ -29,5 +29,7 @@
     "item.willowisp.amarite_amulet": "Amarite Amulet",
     "item.willowisp.strawberry_bonbon": "Strawberry Bonbon",
     "block.willowisp.wavy_wallpaper": "Wavy Wallpaper",
-    "block.willowisp.cubed_wallpaper": "Cubed Wallpaper"
+    "block.willowisp.cubed_wallpaper": "Cubed Wallpaper",
+    "command.willowisp.getBloodFeedback": "%1$s's blood type: %2$s",
+    "command.willowisp.setBloodFeedback": "Set %1$s's blood type to %2$s"
 }

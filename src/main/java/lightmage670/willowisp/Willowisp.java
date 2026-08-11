@@ -192,12 +192,12 @@ public class Willowisp implements ModInitializer {
         AxeItem.STRIPPED_BLOCKS.put(WALLPAPER, TORN_WALLPAPER);
     }
 	public static int getBlood(ServerCommandSource source, PlayerEntity target) throws CommandSyntaxException {
-		source.sendFeedback(() -> Text.translatable(target.getName() + "'s blood type: " + new BloodData(target, "").getBloodType(target).toString()), true);
+		source.sendFeedback(() -> Text.translatable("command.willowisp.getBloodFeedback",target.getName(),new BloodData(target, "").getBloodType(target).toString()), false);
 		return 1;
 	}
 	public static int setBlood(ServerCommandSource source, PlayerEntity target, String bloodType){
 		new BloodData(target, bloodType).setBloodType(target, bloodType);
-		source.sendFeedback(() -> Text.translatable("Set " + target.getName() + "'s blood type to " + bloodType.toString()), true);
+		source.sendFeedback(() -> Text.translatable("command.willowisp.setBloodFeedback",target.getName(),bloodType.toString()), true);
 		return 1;
 	}
 }
