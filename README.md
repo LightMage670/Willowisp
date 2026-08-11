@@ -15,6 +15,6 @@ This mod is updated solely for Willowisp SMP, and my intention with coding it is
 Features will be added as requested by and in collaboration with the Willowisp Admin Team.
 
 ## Roadmap
-- Blood Persistence
+- Clean up Blood Command Output
 - Soulbreak Enchant
 - Finish Up Liminal Blocks
