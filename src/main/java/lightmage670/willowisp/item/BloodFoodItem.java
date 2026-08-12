@@ -1,7 +1,5 @@
 package lightmage670.willowisp.item;
 
-import java.util.Set;
-
 import com.mojang.datafixers.util.Pair;
 
 import lightmage670.willowisp.Willowisp;
@@ -13,7 +11,6 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 

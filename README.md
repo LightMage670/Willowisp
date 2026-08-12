@@ -15,7 +15,11 @@ This mod is updated solely for Willowisp SMP, and my intention with coding it is
 Features will be added as requested by and in collaboration with the Willowisp Admin Team.
 
 ## Roadmap
-- Allow Blood as Food
-    - Ensure Vampires can use it effectively
+### For Release:
+- Add Dried Divine Blood to Ancient City Loot Table
 - Soulbreak Enchant
 - Finish Up Liminal Blocks
+- Leon Cube???
+### After Release:
+- Vampire Feeding from Entities?
+- Soul Contract Save UUID?
