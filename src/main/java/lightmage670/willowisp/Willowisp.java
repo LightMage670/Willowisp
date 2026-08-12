@@ -15,6 +15,8 @@ import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.command.argument.EntityArgumentType;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -36,6 +38,9 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import lightmage670.willowisp.attachment.bloodAttachments.BloodData;
 import lightmage670.willowisp.block.WillowispFacingBlock;
 import lightmage670.willowisp.block.LightPillarBlock;
+import lightmage670.willowisp.item.BloodComponent;
+import lightmage670.willowisp.item.BloodFoodItem;
+import lightmage670.willowisp.item.BloodItemSettings;
 import lightmage670.willowisp.item.Syringe;
 
 
@@ -50,12 +55,75 @@ public class Willowisp implements ModInitializer {
 
 	public static final Item SYRINGE = new Syringe(new FabricItemSettings().maxCount(1));
 	public static final Item VIAL = new Item(new FabricItemSettings().maxCount(16));
-	public static final Item MORTAL_VIAL = new Item(new FabricItemSettings().recipeRemainder(VIAL).maxCount(16));
-	public static final Item VAMP_VIAL = new Item(new FabricItemSettings().recipeRemainder(VIAL).maxCount(16));
-	public static final Item DIVINE_VIAL = new Item(new FabricItemSettings().recipeRemainder(VIAL).maxCount(16));
-	public static final Item GOD_VIAL = new Item(new FabricItemSettings().recipeRemainder(VIAL).maxCount(16));
-	public static final Item SCULK_VIAL = new Item(new FabricItemSettings().recipeRemainder(VIAL).maxCount(16));
-	public static final Item INK_VIAL = new Item(new FabricItemSettings().recipeRemainder(VIAL).maxCount(16));
+	public static final FoodComponent MORTAL = new FoodComponent.Builder().alwaysEdible()
+		.hunger(1)
+		.saturationModifier(1)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.build();
+	public static final BloodComponent MORTAL_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 9), 1.0F)
+		.build();
+	public static final Item MORTAL_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(MORTAL).blood(MORTAL_BLOOD));
+	public static final FoodComponent VAMP = new FoodComponent.Builder().alwaysEdible()
+		.hunger(0)
+		.saturationModifier(0)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.build();
+	public static final BloodComponent VAMP_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 1), 1.0F)
+		.build();
+	public static final Item VAMP_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(VAMP).blood(VAMP_BLOOD));
+	public static final FoodComponent DIVINE = new FoodComponent.Builder().alwaysEdible()
+		.hunger(1)
+		.saturationModifier(1)
+		.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.build();
+	public static final BloodComponent DIVINE_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 600, 1), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 9), 1.0F)
+		.build();
+	public static final Item DIVINE_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(DIVINE).blood(DIVINE_BLOOD));
+	public static final FoodComponent GOD = new FoodComponent.Builder().alwaysEdible()
+		.hunger(1)
+		.saturationModifier(1)
+		.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 5), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.build();
+	public static final BloodComponent GOD_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600, 1), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 600, 1), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 600, 2), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 19), 1.0F)
+		.build();
+	public static final Item GOD_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(GOD).blood(GOD_BLOOD));
+	public static final FoodComponent SCULK = new FoodComponent.Builder().alwaysEdible()
+		.hunger(1)
+		.saturationModifier(0)
+		.statusEffect(new StatusEffectInstance(StatusEffects.POISON, 600, 2), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 1), 1.0F)
+		.build();
+	public static final BloodComponent SCULK_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 400, 1), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200, 0), 1.0F)
+		.build();
+	public static final Item SCULK_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(SCULK).blood(SCULK_BLOOD));
+	public static final FoodComponent INK = new FoodComponent.Builder().alwaysEdible()
+		.hunger(0)
+		.saturationModifier(0)
+		.statusEffect(new StatusEffectInstance(StatusEffects.POISON, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 1), 1.0F)
+		.build();
+	public static final BloodComponent INK_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.POISON, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.build();
+	public static final Item INK_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(INK).blood(INK_BLOOD));
 	public static final Block CARPET = new Block(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable());
 	public static final BlockItem CARPET_ITEM = new BlockItem(CARPET, new FabricItemSettings());
 	public static final Block SOGGY_CARPET = new Block(AbstractBlock.Settings.create().mapColor(MapColor.TERRACOTTA_BROWN).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable());
