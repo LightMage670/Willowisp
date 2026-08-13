@@ -80,7 +80,7 @@ public class Willowisp implements ModInitializer {
 		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
 		.build();
 	public static final BloodComponent VAMP_BLOOD = new BloodComponent.Builder().alwaysEdible()
-		.statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 9), 1.0F)
 		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 1), 1.0F)
 		.build();
 	public static final Item VAMP_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(VAMP).blood(VAMP_BLOOD));
@@ -253,19 +253,19 @@ public class Willowisp implements ModInitializer {
 			if (source.isBuiltin() && LootTables.ANCIENT_CITY_CHEST.equals(id)) {
 				LootPool.Builder poolBuilder = LootPool.builder()
                 .with(ItemEntry.builder(DRIED_DIVINE_BLOOD).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F))))
-				.with(EmptyEntry.builder().weight(19));
+				.with(EmptyEntry.builder().weight(4));
  				tableBuilder.pool(poolBuilder);
 			}
 			if (source.isBuiltin() && LootTables.END_CITY_TREASURE_CHEST.equals(id)) {
 				LootPool.Builder poolBuilder = LootPool.builder()
                 .with(ItemEntry.builder(DRIED_DIVINE_BLOOD).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F))))
-				.with(EmptyEntry.builder().weight(14));
+				.with(EmptyEntry.builder().weight(1));
  				tableBuilder.pool(poolBuilder);
 			}
 			if (source.isBuiltin() && LootTables.ANCIENT_CITY_ICE_BOX_CHEST.equals(id)) {
 				LootPool.Builder poolBuilder = LootPool.builder()
                 .with(ItemEntry.builder(DIVINE_VIAL).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F))))
-				.with(EmptyEntry.builder().weight(9));
+				.with(EmptyEntry.builder().weight(1));
  				tableBuilder.pool(poolBuilder);
 			}
 			if (source.isBuiltin() && LootTables.JUNGLE_TEMPLE_CHEST.equals(id)) {

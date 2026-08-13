@@ -1,3 +1,6 @@
 {
-  "parent": "willowisp:block/clear"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "willowisp:item/clear"
+  }
 }
