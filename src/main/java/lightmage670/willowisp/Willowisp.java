@@ -37,6 +37,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
 import lightmage670.willowisp.attachment.bloodAttachments.BloodData;
 import lightmage670.willowisp.block.WillowispFacingBlock;
+import lightmage670.willowisp.block.LeonCubeFacingBlock;
 import lightmage670.willowisp.block.LightPillarBlock;
 import lightmage670.willowisp.item.BloodComponent;
 import lightmage670.willowisp.item.BloodFoodItem;
@@ -161,6 +162,8 @@ public class Willowisp implements ModInitializer {
 	public static final BlockItem WAVY_WALLPAPER_ITEM = new BlockItem(WAVY_WALLPAPER, new FabricItemSettings());
 	public static final Block CUBED_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
 	public static final BlockItem CUBED_WALLPAPER_ITEM = new BlockItem(CUBED_WALLPAPER, new FabricItemSettings());
+	public static final Block LEON_CUBE = new LeonCubeFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(0.8F).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+	public static final BlockItem LEON_CUBE_ITEM = new BlockItem(LEON_CUBE, new FabricItemSettings());
 	
 
 	@Override
@@ -215,6 +218,8 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "wavy_wallpaper"), WAVY_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "cubed_wallpaper"), CUBED_WALLPAPER);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "cubed_wallpaper"), CUBED_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "leon_cube"), LEON_CUBE);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "leon_cube"), LEON_CUBE_ITEM);
 
 		CommandRegistrationCallback.EVENT.register((dispatcher,registryAccess,environment)->{
 			dispatcher.register(

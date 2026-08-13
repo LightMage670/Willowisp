@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#o#",
+    "ylb",
+    "#w#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:black_concrete"
+    },
+    "o": {
+      "item": "minecraft:orange_dye"
+    },
+    "y": {
+      "item": "minecraft:yellow_dye"
+    },
+    "l": {
+      "item": "minecraft:lime_dye"
+    },
+    "b": {
+      "item": "minecraft:blue_dye"
+    },
+    "w": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": { "item": "willowisp:leon_cube"}
+}

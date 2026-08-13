@@ -16,10 +16,10 @@ Features will be added as requested by and in collaboration with the Willowisp A
 
 ## Roadmap
 ### For Release:
-- Add Dried Divine Blood to Ancient City Loot Table
+- Add Dried Divine Blood to Ancient City, End City Loot Table
 - Soulbreak Enchant
 - Finish Up Liminal Blocks
-- Leon Cube???
+- Add Leon Cube to Jungle Temple Loot Table
 ### After Release:
 - Vampire Feeding from Entities?
 - Soul Contract Save UUID?
