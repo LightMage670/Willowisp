@@ -16,8 +16,7 @@ Features will be added as requested by and in collaboration with the Willowisp A
 
 ## Roadmap
 ### For Release:
-- Soulbreak Enchant
-- Finish Up Liminal Blocks
+- Bug Fixing
 ### After Release:
-- Vampire Feeding from Entities?
+- Soulbreak Enchant
 - Soul Contract Save UUID?

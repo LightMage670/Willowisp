@@ -242,7 +242,7 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_wavy_wallpaper"), TRIM_WAVY_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_cubed_wallpaper"), TRIM_CUBED_WALLPAPER);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_cubed_wallpaper"), TRIM_CUBED_WALLPAPER_ITEM);
-		Registry.register(Registries.BLOCK, new Identifier("willowisp", "pale_wallpaper"), PALE_WALLPAPER);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "pale_wallpaper"), PALE_WALLPAPER); // Five Nights At Polycule
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "pale_wallpaper"), PALE_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "light_gray_wallpaper"), LIGHT_GRAY_WALLPAPER);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "light_gray_wallpaper"), LIGHT_GRAY_WALLPAPER_ITEM);
