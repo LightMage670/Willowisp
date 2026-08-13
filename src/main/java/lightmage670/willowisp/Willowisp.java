@@ -3,7 +3,15 @@ package lightmage670.willowisp;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.item.Item;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
+import net.minecraft.loot.entry.EmptyEntry;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
@@ -220,6 +228,33 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "cubed_wallpaper"), CUBED_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "leon_cube"), LEON_CUBE);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "leon_cube"), LEON_CUBE_ITEM);
+
+		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+			if (source.isBuiltin() && LootTables.ANCIENT_CITY_CHEST.equals(id)) {
+				LootPool.Builder poolBuilder = LootPool.builder()
+                .with(ItemEntry.builder(DRIED_DIVINE_BLOOD).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F))))
+				.with(EmptyEntry.builder().weight(19));
+ 				tableBuilder.pool(poolBuilder);
+			}
+			if (source.isBuiltin() && LootTables.END_CITY_TREASURE_CHEST.equals(id)) {
+				LootPool.Builder poolBuilder = LootPool.builder()
+                .with(ItemEntry.builder(DRIED_DIVINE_BLOOD).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F))))
+				.with(EmptyEntry.builder().weight(14));
+ 				tableBuilder.pool(poolBuilder);
+			}
+			if (source.isBuiltin() && LootTables.ANCIENT_CITY_ICE_BOX_CHEST.equals(id)) {
+				LootPool.Builder poolBuilder = LootPool.builder()
+                .with(ItemEntry.builder(DIVINE_VIAL).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F))))
+				.with(EmptyEntry.builder().weight(9));
+ 				tableBuilder.pool(poolBuilder);
+			}
+			if (source.isBuiltin() && LootTables.JUNGLE_TEMPLE_CHEST.equals(id)) {
+				LootPool.Builder poolBuilder = LootPool.builder()
+                .with(ItemEntry.builder(LEON_CUBE_ITEM).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0F))))
+				.with(EmptyEntry.builder().weight(999));
+ 				tableBuilder.pool(poolBuilder);
+			}
+		});
 
 		CommandRegistrationCallback.EVENT.register((dispatcher,registryAccess,environment)->{
 			dispatcher.register(
