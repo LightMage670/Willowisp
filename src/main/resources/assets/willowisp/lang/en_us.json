@@ -32,5 +32,9 @@
     "block.willowisp.cubed_wallpaper": "Cubed Wallpaper",
     "command.willowisp.getBloodFeedback": "%1$s's blood type: %2$s",
     "command.willowisp.setBloodFeedback": "Set %1$s's blood type to %2$s",
-    "block.willowisp.leon_cube": "Leon Cube"
+    "block.willowisp.leon_cube": "Leon Cube",
+    "block.willowisp.trim_wavy_wallpaper": "Trimmed Wavy Wallpaper",
+    "block.willowisp.trim_cubed_wallpaper": "Trimmed Cubed Wallpaper",
+    "block.willowisp.pale_wallpaper": "Pale Wallpaper",
+    "block.willowisp.light_gray_wallpaper": "Light Gray Wallpaper"
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "p"
+  ],
+  "key": {
+    "#": {
+      "item": "willowisp:wavy_wallpaper"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": { "item": "willowisp:trim_wavy_wallpaper" }
+}

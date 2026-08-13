@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "smpcolon3:ceiling_tile",
-    "smpcolon3:divine_block"
+    "willowisp:ceiling_tile",
+    "willowisp:divine_block"
   ]
 }

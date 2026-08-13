@@ -172,6 +172,14 @@ public class Willowisp implements ModInitializer {
 	public static final BlockItem CUBED_WALLPAPER_ITEM = new BlockItem(CUBED_WALLPAPER, new FabricItemSettings());
 	public static final Block LEON_CUBE = new LeonCubeFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(0.8F).sounds(BlockSoundGroup.AMETHYST_BLOCK));
 	public static final BlockItem LEON_CUBE_ITEM = new BlockItem(LEON_CUBE, new FabricItemSettings());
+	public static final Block TRIM_WAVY_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem TRIM_WAVY_WALLPAPER_ITEM = new BlockItem(TRIM_WAVY_WALLPAPER, new FabricItemSettings());
+	public static final Block TRIM_CUBED_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem TRIM_CUBED_WALLPAPER_ITEM = new BlockItem(TRIM_CUBED_WALLPAPER, new FabricItemSettings());
+	public static final Block PALE_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem PALE_WALLPAPER_ITEM = new BlockItem(PALE_WALLPAPER, new FabricItemSettings());
+	public static final Block LIGHT_GRAY_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem LIGHT_GRAY_WALLPAPER_ITEM = new BlockItem(LIGHT_GRAY_WALLPAPER, new FabricItemSettings());
 	
 
 	@Override
@@ -228,6 +236,14 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "cubed_wallpaper"), CUBED_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "leon_cube"), LEON_CUBE);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "leon_cube"), LEON_CUBE_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_wavy_wallpaper"), TRIM_WAVY_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_wavy_wallpaper"), TRIM_WAVY_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_cubed_wallpaper"), TRIM_CUBED_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_cubed_wallpaper"), TRIM_CUBED_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "pale_wallpaper"), PALE_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "pale_wallpaper"), PALE_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "light_gray_wallpaper"), LIGHT_GRAY_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "light_gray_wallpaper"), LIGHT_GRAY_WALLPAPER_ITEM);
 
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 			if (source.isBuiltin() && LootTables.ANCIENT_CITY_CHEST.equals(id)) {

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "#pp",
+    "ppp"
+  ],
+  "key": {
+    "#": {
+      "item":"minecraft:yellow_dye"
+    },
+    "p": {
+      "item": "willowisp:blank_wallpaper"
+    }
+  },
+  "result": { "item": "willowisp:wallpaper", "count":8 }
+}

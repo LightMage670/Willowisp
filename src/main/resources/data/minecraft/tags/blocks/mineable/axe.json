@@ -1,10 +1,16 @@
 {
   "replace": false,
   "values": [
-    "smpcolon3:blank_wallpaper",
-    "smpcolon3:trim_blank_wallpaper",
-    "smpcolon3:wallpaper",
-    "smpcolon3:trim_wallpaper",
-    "smpcolon3:torn_wallpaper"
+    "willowisp:blank_wallpaper",
+    "willowisp:trim_blank_wallpaper",
+    "willowisp:wallpaper",
+    "willowisp:trim_wallpaper",
+    "willowisp:torn_wallpaper",
+    "willowisp:wavy_wallpaper",
+    "willowisp:cubed_wallpaper",
+    "willowisp:trim_wavy_wallpaper",
+    "willowisp:trim_cubed_wallpaper",
+    "willowisp:pale_wallpaper",
+    "willowisp:light_gray_wallpaper"
   ]
 }
