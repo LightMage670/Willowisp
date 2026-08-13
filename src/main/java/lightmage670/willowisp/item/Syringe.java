@@ -44,6 +44,8 @@ public class Syringe extends Item {
                         if(invFull){ user.dropStack(vial); }
                         else{ user.giveItemStack(vial); }
                         user.playerScreenHandler.sendContentUpdates();
+                        ItemStack syringeStack = user.getStackInHand(hand);
+                        syringeStack.decrement(1);
                         return TypedActionResult.success(user.getStackInHand(hand));
                     }
                 }
@@ -76,6 +78,8 @@ public class Syringe extends Item {
                             if(invFull){ user.dropStack(vial); }
                             else{ user.giveItemStack(vial); }
                             user.playerScreenHandler.sendContentUpdates();
+                            ItemStack syringeStack = user.getStackInHand(hand);
+                            syringeStack.decrement(1);
                             return ActionResult.SUCCESS;
                         }
                     }
@@ -87,6 +91,8 @@ public class Syringe extends Item {
                             invSlot.decrement(1);
                             if(invFull){ user.dropStack(new ItemStack(Willowisp.MORTAL_VIAL)); }
                             else{ user.giveItemStack(new ItemStack(Willowisp.MORTAL_VIAL)); }
+                            ItemStack syringeStack = user.getStackInHand(hand);
+                            syringeStack.decrement(1);
                             return ActionResult.SUCCESS;
                         }
                     }
@@ -98,6 +104,8 @@ public class Syringe extends Item {
                             invSlot.decrement(1);
                             if(invFull){ user.dropStack(new ItemStack(Willowisp.SCULK_VIAL)); }
                             else{ user.giveItemStack(new ItemStack(Willowisp.SCULK_VIAL)); }
+                            ItemStack syringeStack = user.getStackInHand(hand);
+                            syringeStack.decrement(1);
                             return ActionResult.SUCCESS;
                         }
                     }
