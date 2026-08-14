@@ -42,6 +42,9 @@ public final class WillowispItemGroups {
             entries.add(Willowisp.LIGHT_GRAY_WALLPAPER_ITEM);
             entries.add(Willowisp.PALE_WALLPAPER_ITEM);
             entries.add(Willowisp.TREE_WALLPAPER_ITEM);
+            entries.add(Willowisp.TRIM_LIGHT_GRAY_WALLPAPER_ITEM);
+            entries.add(Willowisp.TRIM_PALE_WALLPAPER_ITEM);
+            entries.add(Willowisp.TRIM_TREE_WALLPAPER_ITEM);
             entries.add(Willowisp.CEILING_TILE_ITEM);
             entries.add(Willowisp.LAMP_ITEM);
             entries.add(Willowisp.LAMP2_ITEM);

@@ -182,6 +182,12 @@ public class Willowisp implements ModInitializer {
 	public static final BlockItem LIGHT_GRAY_WALLPAPER_ITEM = new BlockItem(LIGHT_GRAY_WALLPAPER, new FabricItemSettings());
 	public static final Block TREE_WALLPAPER = new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
 	public static final BlockItem TREE_WALLPAPER_ITEM = new BlockItem(TREE_WALLPAPER, new FabricItemSettings());
+	public static final Block TRIM_PALE_WALLPAPER = new WillowispFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem TRIM_PALE_WALLPAPER_ITEM = new BlockItem(TRIM_PALE_WALLPAPER, new FabricItemSettings());
+	public static final Block TRIM_LIGHT_GRAY_WALLPAPER = new WillowispFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem TRIM_LIGHT_GRAY_WALLPAPER_ITEM = new BlockItem(TRIM_LIGHT_GRAY_WALLPAPER, new FabricItemSettings());
+	public static final Block TRIM_TREE_WALLPAPER = new WillowispFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
+	public static final BlockItem TRIM_TREE_WALLPAPER_ITEM = new BlockItem(TRIM_TREE_WALLPAPER, new FabricItemSettings());
 	
 
 	@Override
@@ -248,6 +254,12 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "light_gray_wallpaper"), LIGHT_GRAY_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "tree_wallpaper"), TREE_WALLPAPER);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "tree_wallpaper"), TREE_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_pale_wallpaper"), TRIM_PALE_WALLPAPER); // Five Nights At Polycule
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_pale_wallpaper"), TRIM_PALE_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_light_gray_wallpaper"), TRIM_LIGHT_GRAY_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_light_gray_wallpaper"), TRIM_LIGHT_GRAY_WALLPAPER_ITEM);
+		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_tree_wallpaper"), TRIM_TREE_WALLPAPER);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_tree_wallpaper"), TRIM_TREE_WALLPAPER_ITEM);
 
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 			if (source.isBuiltin() && LootTables.ANCIENT_CITY_CHEST.equals(id)) {

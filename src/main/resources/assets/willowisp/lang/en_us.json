@@ -37,5 +37,8 @@
     "block.willowisp.trim_cubed_wallpaper": "Trimmed Cubed Wallpaper",
     "block.willowisp.pale_wallpaper": "Pale Wallpaper",
     "block.willowisp.light_gray_wallpaper": "Light Gray Wallpaper",
-    "block.willowisp.tree_wallpaper": "Tree Wallpaper"
+    "block.willowisp.tree_wallpaper": "Tree Wallpaper",
+    "block.willowisp.trim_pale_wallpaper": "Trimmed Pale Wallpaper",
+    "block.willowisp.trim_light_gray_wallpaper": "Trimmed Light Gray Wallpaper",
+    "block.willowisp.trim_tree_wallpaper": "Trimmed Tree Wallpaper"
 }

@@ -12,6 +12,9 @@
     "willowisp:trim_cubed_wallpaper",
     "willowisp:pale_wallpaper",
     "willowisp:light_gray_wallpaper",
-    "willowisp:tree_wallpaper"
+    "willowisp:tree_wallpaper",
+    "willowisp:trim_pale_wallpaper",
+    "willowisp:trim_light_gray_wallpaper",
+    "willowisp:trim_tree_wallpaper"
   ]
 }

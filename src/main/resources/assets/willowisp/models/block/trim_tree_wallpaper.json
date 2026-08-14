@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "willowisp:block/trim_tree_wallpaper_side",
+    "end": "willowisp:block/tree_wallpaper"
+  }
+}
