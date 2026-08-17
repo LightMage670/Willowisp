@@ -18,5 +18,6 @@ Features will be added as requested by and in collaboration with the Willowisp A
 ### For Release:
 - Bug Fixing
 ### After Release:
+- Invis Item
 - Soulbreak Enchant
-- Soul Contract Save UUID?
+- Soul Contract Save UUID
