@@ -16,7 +16,7 @@ public class BloodSuggestionProvider implements SuggestionProvider<ServerCommand
     @Override
     public CompletableFuture<Suggestions> getSuggestions(CommandContext<ServerCommandSource> context,
         SuggestionsBuilder builder) throws CommandSyntaxException {
-        String[] bloodTypes = {"mortal","divine","god","vampire","sculk","ink","none"};
+        String[] bloodTypes = {"mortal","magic","divine","god","vampire","bad","sculk","ink","none"};
 
         for (String bloodType : bloodTypes) {
 			builder.suggest(bloodType);

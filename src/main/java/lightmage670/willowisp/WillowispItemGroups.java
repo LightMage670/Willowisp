@@ -16,9 +16,11 @@ public final class WillowispItemGroups {
             entries.add(Willowisp.SYRINGE);
             entries.add(Willowisp.VIAL);
             entries.add(Willowisp.MORTAL_VIAL);
+            entries.add(Willowisp.MAGIC_VIAL);
             entries.add(Willowisp.DIVINE_VIAL);
             entries.add(Willowisp.GOD_VIAL);
             entries.add(Willowisp.VAMP_VIAL);
+            entries.add(Willowisp.BAD_VIAL);
             entries.add(Willowisp.SCULK_VIAL);
             entries.add(Willowisp.INK_VIAL);
             entries.add(Willowisp.DRIED_DIVINE_BLOOD);

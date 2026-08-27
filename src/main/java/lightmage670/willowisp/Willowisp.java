@@ -74,6 +74,16 @@ public class Willowisp implements ModInitializer {
 		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 9), 1.0F)
 		.build();
 	public static final Item MORTAL_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(MORTAL).blood(MORTAL_BLOOD));
+	public static final FoodComponent MAGIC = new FoodComponent.Builder().alwaysEdible()
+		.hunger(1)
+		.saturationModifier(1)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.build();
+	public static final BloodComponent MAGIC_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 600, 1), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 9), 1.0F)
+		.build();
+	public static final Item MAGIC_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(MAGIC).blood(MAGIC_BLOOD));
 	public static final FoodComponent VAMP = new FoodComponent.Builder().alwaysEdible()
 		.hunger(0)
 		.saturationModifier(0)
@@ -84,6 +94,17 @@ public class Willowisp implements ModInitializer {
 		.statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1, 1), 1.0F)
 		.build();
 	public static final Item VAMP_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(VAMP).blood(VAMP_BLOOD));
+	public static final FoodComponent BAD = new FoodComponent.Builder().alwaysEdible()
+		.hunger(0)
+		.saturationModifier(0)
+		.statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600, 0), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.POISON, 200, 0), 1.0F)
+		.build();
+	public static final BloodComponent BAD_BLOOD = new BloodComponent.Builder().alwaysEdible()
+		.statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 4), 1.0F)
+		.statusEffect(new StatusEffectInstance(StatusEffects.POISON, 600, 0), 1.0F)
+		.build();
+	public static final Item BAD_VIAL = new BloodFoodItem(new BloodItemSettings().recipeRemainder(VIAL).maxCount(16).food(BAD).blood(BAD_BLOOD));
 	public static final FoodComponent DIVINE = new FoodComponent.Builder().alwaysEdible()
 		.hunger(1)
 		.saturationModifier(1)
@@ -202,6 +223,8 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "vial"), VIAL);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "mortal_vial"), MORTAL_VIAL);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "vampire_vial"), VAMP_VIAL);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "magic_vial"), MAGIC_VIAL);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "bad_vial"), BAD_VIAL);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "divine_vial"), DIVINE_VIAL);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "god_vial"), GOD_VIAL);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "sculk_vial"), SCULK_VIAL);

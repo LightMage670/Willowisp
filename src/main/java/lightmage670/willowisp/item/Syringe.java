@@ -27,9 +27,11 @@ public class Syringe extends Item {
             ItemStack vial = null;
             if(getBlood(user).equals("none")){ vial = null; return TypedActionResult.fail(user.getStackInHand(hand)); }
             else if(getBlood(user).equals("mortal")){ vial = new ItemStack(Willowisp.MORTAL_VIAL); }
+            else if(getBlood(user).equals("magic")){ vial = new ItemStack(Willowisp.MAGIC_VIAL); }
             else if(getBlood(user).equals("divine")){ vial = new ItemStack(Willowisp.DIVINE_VIAL); }
             else if(getBlood(user).equals("god")){ vial = new ItemStack(Willowisp.GOD_VIAL); }
             else if(getBlood(user).equals("vampire")){ vial = new ItemStack(Willowisp.VAMP_VIAL); }
+            else if(getBlood(user).equals("bad")){ vial = new ItemStack(Willowisp.BAD_VIAL); }
             else if(getBlood(user).equals("sculk")){ vial = new ItemStack(Willowisp.SCULK_VIAL); }
             else if(getBlood(user).equals("ink")){ vial = new ItemStack(Willowisp.INK_VIAL); }
             else { return TypedActionResult.fail(user.getStackInHand(hand)); }
@@ -65,9 +67,11 @@ public class Syringe extends Item {
                 if(entity instanceof PlayerEntity){
                     if(getBlood((PlayerEntity) entity).equals("none")){ vial = null; return ActionResult.FAIL; }
                     else if(getBlood((PlayerEntity) entity).equals("mortal")){ vial = new ItemStack(Willowisp.MORTAL_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("magic")){ vial = new ItemStack(Willowisp.MAGIC_VIAL); }
                     else if(getBlood((PlayerEntity) entity).equals("divine")){ vial = new ItemStack(Willowisp.DIVINE_VIAL); }
                     else if(getBlood((PlayerEntity) entity).equals("god")){ vial = new ItemStack(Willowisp.GOD_VIAL); }
                     else if(getBlood((PlayerEntity) entity).equals("vampire")){ vial = new ItemStack(Willowisp.VAMP_VIAL); }
+                    else if(getBlood((PlayerEntity) entity).equals("bad")){ vial = new ItemStack(Willowisp.BAD_VIAL); }
                     else if(getBlood((PlayerEntity) entity).equals("sculk")){ vial = new ItemStack(Willowisp.SCULK_VIAL); }
                     else if(getBlood((PlayerEntity) entity).equals("ink")){ vial = new ItemStack(Willowisp.INK_VIAL); }
                     else { return ActionResult.FAIL; }
