@@ -217,7 +217,7 @@ public class Willowisp implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello! :3");
+		LOGGER.info("Willowisp Loaded");
 
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "syringe"), SYRINGE);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "vial"), VIAL);
