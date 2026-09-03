@@ -15,12 +15,17 @@ This mod is updated solely for Willowisp SMP, and my intention with coding it is
 Features will be added as requested by and in collaboration with the Willowisp Admin Team.
 
 ## Roadmap
-### 1.1 - Aug 28
-- Magic and Bad Blood
-### 1.2 - TBD
+### 1.1 - Sep 04
+- Vampire Bite
+  - 120s CD
 - Invis Item
-### 1.3 - TBD
+### 1.2 - TBD
 - Soulbreak Enchant
 ### TBD
 - Soul Contract Save UUID
 - Maybe Rocket's spin cube?
+- Smite
+  - Options
+    - Soulbreak
+    - Kick
+    - Ban

@@ -42,5 +42,6 @@
     "block.willowisp.tree_wallpaper": "Tree Wallpaper",
     "block.willowisp.trim_pale_wallpaper": "Trimmed Pale Wallpaper",
     "block.willowisp.trim_light_gray_wallpaper": "Trimmed Light Gray Wallpaper",
-    "block.willowisp.trim_tree_wallpaper": "Trimmed Tree Wallpaper"
+    "block.willowisp.trim_tree_wallpaper": "Trimmed Tree Wallpaper",
+    "item.willowisp.invis_item": "Blind Eye"
 }

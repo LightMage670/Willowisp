@@ -50,6 +50,7 @@ import lightmage670.willowisp.block.LightPillarBlock;
 import lightmage670.willowisp.item.BloodComponent;
 import lightmage670.willowisp.item.BloodFoodItem;
 import lightmage670.willowisp.item.BloodItemSettings;
+import lightmage670.willowisp.item.InvisItem;
 import lightmage670.willowisp.item.Syringe;
 
 
@@ -209,6 +210,7 @@ public class Willowisp implements ModInitializer {
 	public static final BlockItem TRIM_LIGHT_GRAY_WALLPAPER_ITEM = new BlockItem(TRIM_LIGHT_GRAY_WALLPAPER, new FabricItemSettings());
 	public static final Block TRIM_TREE_WALLPAPER = new WillowispFacingBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_GRAY).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable());
 	public static final BlockItem TRIM_TREE_WALLPAPER_ITEM = new BlockItem(TRIM_TREE_WALLPAPER, new FabricItemSettings());
+	public static final Item INVIS_ITEM = new InvisItem(new FabricItemSettings());
 	
 
 	@Override
@@ -283,6 +285,7 @@ public class Willowisp implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_light_gray_wallpaper"), TRIM_LIGHT_GRAY_WALLPAPER_ITEM);
 		Registry.register(Registries.BLOCK, new Identifier("willowisp", "trim_tree_wallpaper"), TRIM_TREE_WALLPAPER);
 		Registry.register(Registries.ITEM, new Identifier("willowisp", "trim_tree_wallpaper"), TRIM_TREE_WALLPAPER_ITEM);
+		Registry.register(Registries.ITEM, new Identifier("willowisp", "invis_item"), INVIS_ITEM);
 
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 			if (source.isBuiltin() && LootTables.ANCIENT_CITY_CHEST.equals(id)) {

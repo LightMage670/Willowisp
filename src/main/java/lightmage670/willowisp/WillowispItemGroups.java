@@ -51,6 +51,7 @@ public final class WillowispItemGroups {
             entries.add(Willowisp.LAMP_ITEM);
             entries.add(Willowisp.LAMP2_ITEM);
             entries.add(Willowisp.CLEAR_ITEM);
+            entries.add(Willowisp.INVIS_ITEM);
             entries.add(Willowisp.AMARITE_AMULET);
             entries.add(Willowisp.BONBON);
             entries.add(Willowisp.LEON_CUBE_ITEM);
