@@ -5,7 +5,7 @@ Code:
 - LightMage670
 
 Textures:
-- Lilkokoma (Vials, Syringe, Divine, Contracts)
+- Lilkokoma (Vials, Syringe, Fangs, Divine, Contracts)
 - DuckierHawk4222 (Liminal Blocks)
 - Monti_01 (Amarite Amulet)
 - Allen_Starlight (Strawberry Bonbons)

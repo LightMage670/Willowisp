@@ -14,6 +14,7 @@ public final class WillowispItemGroups {
         .displayName(Text.translatable("itemGroup.willowisp.willowisp_group"))
         .entries((content, entries) -> {
             entries.add(Willowisp.SYRINGE);
+            entries.add(Willowisp.FANGS);
             entries.add(Willowisp.VIAL);
             entries.add(Willowisp.MORTAL_VIAL);
             entries.add(Willowisp.MAGIC_VIAL);

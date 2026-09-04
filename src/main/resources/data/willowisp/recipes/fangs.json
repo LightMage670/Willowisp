@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "rrr",
+    "b#b"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bone_meal"
+    },
+    "r": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "b": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": { "item": "willowisp:fangs" }
+}

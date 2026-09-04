@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {"item": "minecraft:ender_eye"},
+        {"item": "minecraft:lapis_lazuli"},
+        {"item": "minecraft:quartz"}
+    ],
+    "result": {
+        "item": "willowisp:invis_item"
+    }
+}
