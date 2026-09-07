@@ -1,6 +1,7 @@
 package lightmage670.willowisp.item;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +18,9 @@ public class InvisItem extends Item {
             if(player.getOffHandStack()==stack){
                 player.setInvisible(true);
             } else {
-                player.setInvisible(false);
+                if(!player.hasStatusEffect(StatusEffects.INVISIBILITY)){
+                    player.setInvisible(false);
+                }
             }
         }
     }
