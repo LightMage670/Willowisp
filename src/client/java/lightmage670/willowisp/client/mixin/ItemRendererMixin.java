@@ -16,17 +16,15 @@ import lightmage670.willowisp.Willowisp;
 @Mixin(ItemRenderer.class)
 public class ItemRendererMixin {
 
-    /*
     @Inject(
-        method = "Lnet/minecraft/client/render/item/ItemRenderer;renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformation$Mode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IILnet/minecraft/client/render/model/BakedModel;)V",
+        method = "renderItem",
         at = @At("HEAD"),
         cancellable = true
     )
     private void onRenderItem(ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel model, CallbackInfo ci) {
         
         if (stack.isOf(Willowisp.INVIS_ITEM) && (renderMode == ModelTransformationMode.THIRD_PERSON_LEFT_HAND)) {
-            ci.cancel(); 
+            ci.cancel();
         }
     }
-    */
-} 
+}

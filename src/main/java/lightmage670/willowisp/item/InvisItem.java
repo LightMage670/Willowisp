@@ -21,6 +21,9 @@ public class InvisItem extends Item {
                 if(!player.hasStatusEffect(StatusEffects.INVISIBILITY)){
                     player.setInvisible(false);
                 }
+                if(player.isSpectator()){
+                    player.setInvisible(true); // You'd think I wouldn't need this, but without it, spectators with an invis item in their inventory aren't transparent to other spectators.
+                }
             }
         }
     }
