@@ -17,11 +17,10 @@ Features will be added as requested by and in collaboration with the Willowisp A
 ## Roadmap
 ### 1.2 - TBD
 - Soulbreak Enchant
-### TBD
-- Soul Contract Save UUID
-- Maybe Rocket's spin cube?
 - Smite
   - Options
     - Soulbreak
     - Kick
     - Ban
+### TBD
+- Soul Contract Save UUID
